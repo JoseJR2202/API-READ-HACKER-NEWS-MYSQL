@@ -1,0 +1,413 @@
+{
+	"info": {
+		"_postman_id": "54a4dc9e-ad5b-4514-80a0-9ec4af7dca80",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "list comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/comment/5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"comment",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filter comments by author",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"author\":\"andre\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/comment/author/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"comment",
+								"author",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list comments by date",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\":\"2022-02-18\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/comment/date/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"comment",
+								"date",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list comments by tag",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tag\":\"story_30361850\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/comment/tag/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"comment",
+								"tag",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete comments",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/comment/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"comment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filter list comments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"author\":\"ot\",\r\n    \"tags\":[\"story\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/comment/filter/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"comment",
+								"filter",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "storys",
+			"item": [
+				{
+					"name": "list storys",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/story/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"story",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list storys by title",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"nodejs\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/story/title/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"story",
+								"title",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list storys by author",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"author\":\"jeremieh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/story/author/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"story",
+								"author",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list storys by date",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\":\"2022-02-15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/story/date/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"story",
+								"date",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete story",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/story/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"story",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filter list storys",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"nodejs\",\r\n    \"author\":\"jeremieh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/story/filter/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"story",
+								"filter",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Read Hacker News",
+			"item": [
+				{
+					"name": "read hacker news",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://hn.algolia.com/api/v1/search_by_date?query=nodejs",
+							"protocol": "https",
+							"host": [
+								"hn",
+								"algolia",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"search_by_date"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "nodejs"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read Hacker News for Api",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tags",
+			"item": [
+				{
+					"name": "list tags",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/tag/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"tag",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
